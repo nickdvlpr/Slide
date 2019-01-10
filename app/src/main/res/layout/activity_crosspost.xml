@@ -12,7 +12,7 @@
         android:layout_height="@dimen/standard_toolbar_height"
         android:minHeight="@dimen/standard_toolbar_height"
         android:background="@color/md_amber_500"
-        android:elevation="8dp"
+        android:elevation="0dp"
         android:paddingEnd="16dp"
         android:theme="@style/Theme.AppCompat"
         android:title="@string/editor_submit">

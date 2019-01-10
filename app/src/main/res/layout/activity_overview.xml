@@ -26,7 +26,9 @@
         <android.support.design.widget.AppBarLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            >
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -34,7 +36,8 @@
                 android:layout_height="@dimen/standard_toolbar_height"
                 android:minHeight="@dimen/standard_toolbar_height"
                 android:theme="@style/ActionBarCompat"
-                android:title="@string/app_name" >
+                android:title="@string/app_name"
+                >
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -45,8 +48,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:hint="@string/drawer_search"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/md_grey_300"
+                        android:textColor="@color/my_text_primary"
+                        android:textColorHint="@color/md_grey_400"
                         android:visibility="gone"
                         android:imeOptions="actionSearch|flagNoExtractUi"
                         android:singleLine="true"

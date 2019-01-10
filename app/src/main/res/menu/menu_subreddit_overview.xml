@@ -3,11 +3,19 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context=".SubredditOverview">
 
+
+
+
+    <!-- This is the menu for the main posts page. -->
+
+
+
+
     <item
             android:id="@+id/action_shadowbox"
             android:icon="@drawable/shadowbox"
             android:title="@string/general_enable_shadowbox"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="never"/>
 
     <item
             android:id="@+id/action_sort"
@@ -25,19 +33,19 @@
             android:id="@+id/action_refresh"
             android:icon="@drawable/ic_refresh"
             android:title="@string/btn_refresh"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="never"/>
 
     <item
             android:id="@+id/gallery"
             android:icon="@drawable/image"
             android:title="@string/gallery_mode"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="never"/>
 
     <item
             android:id="@+id/sidebar"
             android:icon="@drawable/infonew"
             android:title="@string/general_open_settings"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="never"/>
 
     <item
             android:id="@+id/submit"

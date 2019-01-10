@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/standard_toolbar_height"
     android:minHeight="@dimen/standard_toolbar_height"
-    android:theme="@style/Theme.AppCompat"
+    android:theme="@style/ActionBarCompat"
     android:elevation="8dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <EditText

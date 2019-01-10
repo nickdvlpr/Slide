@@ -9,19 +9,19 @@ import android.view.animation.LinearInterpolator;
  * Created by ccrama on 2/18/2016.
  * Adapted from http://rylexr.tinbytes.com/2015/04/27/how-to-hideshow-android-toolbar-when-scrolling-google-play-musics-behavior/
  */
-public class ToolbarScrollHideHandler extends RecyclerView.OnScrollListener {
+public class ToolbarScrollHideHandlerBottomToolbar extends RecyclerView.OnScrollListener {
 
     Toolbar tToolbar;
     View mAppBar;
     View extra;
     View opposite;
 
-    public ToolbarScrollHideHandler(Toolbar t, View appBar) {
+    public ToolbarScrollHideHandlerBottomToolbar(Toolbar t, View appBar) {
         tToolbar = t;
         mAppBar = appBar;
     }
 
-    public ToolbarScrollHideHandler(Toolbar t, View appBar, View extra, View opposite) {
+    public ToolbarScrollHideHandlerBottomToolbar(Toolbar t, View appBar, View extra, View opposite) {
         tToolbar = t;
         mAppBar = appBar;
         this.extra = extra;
@@ -135,7 +135,7 @@ public class ToolbarScrollHideHandler extends RecyclerView.OnScrollListener {
 
     private void toolbarAnimateHide() {
         mAppBar.animate()
-                .translationY(1000) // This is what makes the toolbar disappear down offscreen when scrolling up and tapping quickly (whereas before it would randomly glitch to a position about a toolbar length higher on screen)
+                .translationY(-tToolbar.getHeight())
                 .setInterpolator(new LinearInterpolator())
                 .setDuration(180);
         if (extra != null)
@@ -154,7 +154,7 @@ public class ToolbarScrollHideHandler extends RecyclerView.OnScrollListener {
 
     private void oppositeAnimateHide() {
         opposite.animate()
-                .translationY(-opposite.getHeight())
+                .translationY(opposite.getHeight())
                 .setInterpolator(new LinearInterpolator())
                 .setDuration(180);
     }

@@ -47,6 +47,8 @@
         android:textColor="?attr/fontColor"
         android:textSize="?attr/font_commentinfo" />
 
+
+    <!-- This is the textview for number of sub comments that have been collapsed. It is within a colored background (unsure where that code is) that uses the accent color. -->
     <TextView
         android:id="@+id/commentnumber"
         android:layout_width="wrap_content"
@@ -58,7 +60,7 @@
         android:layout_toRightOf="@+id/content"
         android:paddingEnd="2.5dp"
         android:layout_marginStart="-30dp"
-        android:textColor="#fff"
+        android:textColor="@color/white"
         android:layout_marginEnd="6dp"
         android:layout_marginTop="6dp"
         android:textSize="10sp"

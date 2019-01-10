@@ -2,10 +2,12 @@ package me.ccrama.redditslide.Views;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.AttributeSet;
 
 import com.devspark.robototextview.RobotoTypefaces;
 
+import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.SpoilerRobotoTextView;
 import me.ccrama.redditslide.Visuals.FontPreferences;
 
@@ -19,9 +21,9 @@ public class TitleTextView extends SpoilerRobotoTextView {
             int type = new FontPreferences(getContext()).getFontTypeTitle().getTypeface();
             Typeface typeface;
             if (type >= 0) {
-                typeface = RobotoTypefaces.obtainTypeface(c, type);
+                typeface = ResourcesCompat.getFont(c, R.font.product_sans_regular);
             } else {
-                typeface = Typeface.DEFAULT;
+                typeface = ResourcesCompat.getFont(c, R.font.product_sans_regular);
             }
             setTypeface(typeface);
 
@@ -34,9 +36,9 @@ public class TitleTextView extends SpoilerRobotoTextView {
             int type = new FontPreferences(getContext()).getFontTypeTitle().getTypeface();
             Typeface typeface;
             if (type >= 0) {
-                typeface = RobotoTypefaces.obtainTypeface(c, type);
+                typeface = ResourcesCompat.getFont(c, R.font.product_sans_regular); // This is the one that affects title of each post.
             } else {
-                typeface = Typeface.DEFAULT;
+                typeface = ResourcesCompat.getFont(c, R.font.product_sans_regular);
             }
             setTypeface(typeface);
         }
@@ -48,9 +50,9 @@ public class TitleTextView extends SpoilerRobotoTextView {
             int type = new FontPreferences(getContext()).getFontTypeTitle().getTypeface();
             Typeface typeface;
             if (type >= 0) {
-                typeface = RobotoTypefaces.obtainTypeface(c, type);
+                typeface = ResourcesCompat.getFont(c, R.font.product_sans_regular);
             } else {
-                typeface = Typeface.DEFAULT;
+                typeface = ResourcesCompat.getFont(c, R.font.product_sans_regular);
             }
             setTypeface(typeface);
         }

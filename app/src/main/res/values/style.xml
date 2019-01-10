@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Base application theme. Theme.AppCompat.Light.NoActionBar -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/my_background_primary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+
     <!-- From SwipeBackLayout -->
 	<style name="SwipeBackLayout">
 		<item name="edge_size">50dip</item>
@@ -10,8 +20,12 @@
 	</style>
 
     <style name="ActionBarCompat">
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/my_background_primary</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:background">@color/my_background_primary</item>
+        <item name="android:textColorPrimary">@color/my_text_primary</item>
+        <item name="android:textColorSecondary">@color/my_text_primary</item>
     </style>
 
     <style name="FontStyle"></style>
@@ -49,16 +63,25 @@
         <item name="font_cardinfo">16sp</item>
     </style>
 
+
+
+
+
     <style name="FontStyle.MediumComment">
         <item name="font_commenttitle">12sp</item>
         <item name="font_commentinfo">12sp</item>
         <item name="font_commentbody">14sp</item>
     </style>
 
+    <!-- This is the one that affects main posts page. -->
     <style name="FontStyle.MediumPost">
-        <item name="font_cardtitle">20sp</item>
+        <item name="font_cardtitle">18sp</item>
         <item name="font_cardinfo">12sp</item>
     </style>
+
+
+
+
 
     <style name="FontStyle.SmallComment">
         <item name="font_commenttitle">10sp</item>
@@ -89,7 +112,7 @@
 
     <style name="menu_labels_style">
         <item name="android:background">@drawable/fab_label_background</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/my_text_primary</item>
     </style>
 
     <style name="Ripple" tools:keep="@style/Ripple"/>
@@ -184,9 +207,6 @@
         <item name="android:layoutAnimation">@null</item>
     </style>
 
-    <style parent="swipestyle" name="AppTheme">
-        <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
-    </style>
 
     <style parent="swipestyle" name="Theme.AMOLED">
         <item name="activity_background">#000000</item>
@@ -319,10 +339,19 @@
         <item name="tp_backgroundColor">?attr/card_background</item>
     </style>
 
+
+
+
+
+
+
+
+
+    <!-- My Light Theme -->
     <style parent="swipestylelight" name="Theme.LIGHT">
-        <item name="activity_background">#e5e5e5</item>
-        <item name="card_background">#FFFFFF</item>
-        <item name="list_background">#e5e5e5</item>
+        <item name="activity_background">@color/my_background_primary</item>
+        <item name="card_background">@color/my_card_background</item>
+        <item name="list_background">@color/my_background_primary</item>
         <item name="bs_bottomSheetStyle">@style/BottomSheet.StyleDialog.Light</item>
         <item name="fontColor">#DE000000</item> <!-- 87% black -->
         <item name="tintColor">#8A000000</item> <!-- 54% black -->
@@ -332,11 +361,83 @@
         <item name="android:windowBackground">@null</item>
         <item name="actionMenuTextColor">#DE000000</item>
         <item name="android:actionMenuTextColor">#DE000000</item>
-        <item name="android:colorBackground">#e5e5e5</item>
+        <item name="android:colorBackground">@color/my_background_primary</item>
         <item name="tp_selectionColor">?android:colorAccent</item>
         <item name="tp_textColor">?attr/fontColor</item>
         <item name="tp_backgroundColor">?attr/card_background</item>
     </style>
+
+
+
+
+
+
+
+
+
+
+    <!-- Light Theme Subthemes !-->
+
+    <style parent="Theme.LIGHT" name="amber_LIGHT">
+        <item name="colorAccent">@color/md_amber_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="blue_LIGHT">
+        <item name="colorAccent">@color/md_blue_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="cyan_LIGHT">
+        <item name="colorAccent">@color/md_cyan_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="deeporange_LIGHT">
+        <item name="colorAccent">@color/md_deep_orange_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="green_LIGHT">
+        <item name="colorAccent">@color/md_green_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="indigo_LIGHT">
+        <item name="colorAccent">@color/md_indigo_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="lightblue_LIGHT">
+        <item name="colorAccent">@color/md_light_blue_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="lime_LIGHT">
+        <item name="colorAccent">@color/md_lime_A400</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="pink_light">
+        <item name="colorAccent">@color/md_pink_A200</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="teal_light">
+        <item name="colorAccent">@color/md_teal_A700</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="white_light">
+        <item name="colorAccent">@color/md_blue_grey_200</item>
+    </style>
+
+    <style parent="Theme.LIGHT" name="yellow_LIGHT">
+        <item name="colorAccent">@color/md_yellow_A400</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- AMOLED Theme Subthemes !-->
 
@@ -447,8 +548,10 @@
     </style>
 
     <style parent="Theme.AppCompat.NoActionBar" name="swipeable">
+        <item name="android:elevation">0dp</item>
         <item name="android:windowBackground">@null</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowLightStatusBar">true</item> // API 23 this is for the settings, comments, and other activities
     </style>
 
 
@@ -669,55 +772,7 @@
         <item name="colorAccent">@color/md_yellow_A400</item>
     </style>
 
-    <!-- Light Theme Subthemes !-->
 
-    <style parent="Theme.LIGHT" name="amber_LIGHT">
-        <item name="colorAccent">@color/md_amber_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="blue_LIGHT">
-        <item name="colorAccent">@color/md_blue_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="cyan_LIGHT">
-        <item name="colorAccent">@color/md_cyan_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="deeporange_LIGHT">
-        <item name="colorAccent">@color/md_deep_orange_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="green_LIGHT">
-        <item name="colorAccent">@color/md_green_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="indigo_LIGHT">
-        <item name="colorAccent">@color/md_indigo_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="lightblue_LIGHT">
-        <item name="colorAccent">@color/md_light_blue_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="lime_LIGHT">
-        <item name="colorAccent">@color/md_lime_A400</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="pink_light">
-        <item name="colorAccent">@color/md_pink_A200</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="teal_light">
-        <item name="colorAccent">@color/md_teal_A700</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="white_light">
-        <item name="colorAccent">@color/md_blue_grey_200</item>
-    </style>
-
-    <style parent="Theme.LIGHT" name="yellow_LIGHT">
-        <item name="colorAccent">@color/md_yellow_A400</item>
-    </style>
 
     <!--Sepia Theme Subthemes !-->
 

@@ -5,11 +5,12 @@
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
+    android:layout_margin="16dp"
     android:gravity="center"
     android:orientation="vertical"
     cardview:cardBackgroundColor="?attr/card_background"
-    cardview:cardCornerRadius="2dp">
+    cardview:cardCornerRadius="8dp">
+    <!-- This is the card on the main subreddit posts page -->
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

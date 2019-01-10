@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/standard_toolbar_height"
             android:minHeight="@dimen/standard_toolbar_height"
-            android:elevation="16dp"
+            android:elevation="0dp"
             android:background="@color/md_light_blue_500"
             android:theme="@style/Theme.AppCompat">
 

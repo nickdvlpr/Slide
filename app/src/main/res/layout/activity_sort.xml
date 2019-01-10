@@ -14,7 +14,7 @@
         android:minHeight="@dimen/standard_toolbar_height"
         android:elevation="8dp"
         android:background="?attr/tintColor"
-        android:theme="@style/Theme.AppCompat"
+        android:theme="@style/ActionBarCompat"
         app:layout_scrollFlags="scroll|enterAlways">
 
         <ImageView

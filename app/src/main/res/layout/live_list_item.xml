@@ -9,7 +9,7 @@
     android:gravity="center"
     android:orientation="vertical"
     cardview:cardBackgroundColor="?attr/card_background"
-    cardview:cardCornerRadius="1dp"
+    cardview:cardCornerRadius="8dp"
     cardview:cardElevation="0dp"
     cardview:cardMaxElevation="0dp">
 

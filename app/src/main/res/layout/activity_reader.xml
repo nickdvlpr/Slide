@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/standard_toolbar_height"
                 android:clipToPadding="false"
-                android:elevation="8dp"
+                android:elevation="0dp"
                 android:minHeight="@dimen/standard_toolbar_height"
                 android:theme="@style/Theme.AppCompat"
                 app:layout_scrollFlags="scroll|enterAlways"></android.support.v7.widget.Toolbar>

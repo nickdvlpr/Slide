@@ -20,7 +20,8 @@
             android:resizeableActivity="true"
             android:roundIcon="@mipmap/icon_round"
             android:usesCleartextTraffic="true"
-            android:theme="@style/yellow_dark">
+            android:theme="@style/AppTheme"
+        >
         <provider
                 android:name="android.support.v4.content.FileProvider"
                 android:authorities="${applicationId}.provider"

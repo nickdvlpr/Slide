@@ -586,12 +586,13 @@ public class MainActivity extends BaseActivity
                         }
                     });
         }
-        return true;
+        return true; // This is what should be false to make overflow menu and other icons disappear from toolbar.
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final String subreddit = usedArray.get(Reddit.currentPosition);
+
 
         switch (item.getItemId()) {
             case R.id.filter:
@@ -2319,7 +2320,8 @@ public class MainActivity extends BaseActivity
 
         pager.setSwipeLeftOnly(false);
 
-        header.animate().translationY(0).setInterpolator(new LinearInterpolator()).setDuration(180);
+        // This is what moves the toolbar down offscreen when switching to things like the comments page.
+        header.animate().translationY(1000).setInterpolator(new LinearInterpolator()).setDuration(180); // originally 0
 
 
         Reddit.currentPosition = position;
@@ -2348,7 +2350,7 @@ public class MainActivity extends BaseActivity
         setRecentBar(usedArray.get(position));
 
         if (SettingValues.single) {
-            getSupportActionBar().setTitle(usedArray.get(position));
+            getSupportActionBar().setTitle(""); // This is what sets the main post page title. Used to be: setTitle(usedArray.get(position));
         } else {
             if (mTabLayout != null) {
                 mTabLayout.setSelectedTabIndicatorColor(

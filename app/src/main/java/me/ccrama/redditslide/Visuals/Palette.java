@@ -148,8 +148,9 @@ public class Palette {
     public static int getDarkerColor(int color) {
         float[] hsv = new float[3];
 
+        // This is what sets the STATUS BAR COLOR to be the same as the toolbar color. It used to make it darker.
         Color.colorToHSV(color, hsv);
-        hsv[2] *= 0.8f;
+        hsv[1] *= 1.0f;
         color = Color.HSVToColor(hsv);
 
         return color;

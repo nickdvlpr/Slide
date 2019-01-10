@@ -108,7 +108,7 @@ import me.ccrama.redditslide.Views.CommentOverflow;
 import me.ccrama.redditslide.Views.DoEditorActions;
 import me.ccrama.redditslide.Views.PreCachingLayoutManagerComments;
 import me.ccrama.redditslide.Visuals.Palette;
-import me.ccrama.redditslide.handler.ToolbarScrollHideHandler;
+import me.ccrama.redditslide.handler.ToolbarScrollHideHandlerOriginal;
 import me.ccrama.redditslide.util.LinkUtil;
 import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
@@ -180,7 +180,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
 
     }
 
-    ToolbarScrollHideHandler toolbarScroll;
+    ToolbarScrollHideHandlerOriginal toolbarScroll;
     public Toolbar toolbar;
     public int     headerHeight;
     public int shownHeaders = 0;
@@ -216,6 +216,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
         shownHeaders = 0;
 
         headerV.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+
 
         loadallV.setVisibility(View.VISIBLE);
         npV.setVisibility(View.VISIBLE);
@@ -694,7 +695,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
             }
         });
 
-        toolbar.setTitle(subreddit);
+        toolbar.setTitle("");
         toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -1938,7 +1939,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
 
     public void resetScroll(boolean override) {
         if (toolbarScroll == null) {
-            toolbarScroll = new ToolbarScrollHideHandler(toolbar, v.findViewById(R.id.header),
+            toolbarScroll = new ToolbarScrollHideHandlerOriginal(toolbar, v.findViewById(R.id.header),
                     v.findViewById(R.id.progress),
                     SettingValues.commentAutoHide ? v.findViewById(R.id.commentnav) : null) {
                 @Override

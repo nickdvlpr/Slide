@@ -2,12 +2,14 @@
 <resources>
 
     <style name="AppTheme" parent="swipestyle">
-        <item name="colorPrimary">#e64a19</item>
+        <item name="colorPrimary">@color/my_background_primary</item>
         <item name="android:alertDialogTheme">@style/Theme.AppCompat.Dialog.Alert</item>
         <item name="android:alertDialogStyle">@style/Theme.AppCompat.Dialog.Alert</item>
-        <item name="android:colorBackground">#000000</item>
-        <item name="colorPrimaryDark">#000000</item>
+        <item name="android:colorBackground">@color/my_background_primary</item>
+        <item name="colorPrimaryDark">@color/my_background_primary</item>
         <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowLightStatusBar">true</item> // API 23
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 
     <style name="Ripple.List">
